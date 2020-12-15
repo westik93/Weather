@@ -5,6 +5,11 @@ config_dict['language'] = 'ru'
 owm = OWM('efa4a360775bcd5d7c95159628bb7799', config_dict)
 mgr = owm.weather_manager()
 
+from colorama import init
+from  colorama  import  Fore ,  Back ,  Style
+
+print(Back.MAGENTA)
+
 place = input('В каком городе/стране хотите узнать погоду?: ')
 
 observation = mgr.weather_at_place(place)
